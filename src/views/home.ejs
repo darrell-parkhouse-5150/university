@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+</head>
+<body>
+    <h1>Test message form home.ejs</h1>
+    <div class="student-name"><% name %></div>
+    <div class="student-id"><% id %></div>
+
+    <form method="post" action="/register">
+        <div class="form-group">
+            <label for="name"></label>
+            <input type="text" id="name" name="std_name" class="form-control" placeholder="enter student name">
+        </div>
+    </form>
+
+</body>
+</html>
