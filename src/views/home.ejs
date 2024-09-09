@@ -9,13 +9,26 @@
     <h1>Test message form home.ejs</h1>
     <div class="student-name"><% name %></div>
     <div class="student-id"><% id %></div>
+    <div class="student-gpa"><% gpa %></div>
 
     <form method="post" action="/register">
         <div class="form-group">
             <label for="name"></label>
             <input type="text" id="name" name="std_name" class="form-control" placeholder="enter student name">
         </div>
+        <div class="form-group">
+            <label for="id"></label>
+            <input type="text" id="id" placehoder="enter student id">
+        </div>
+        <button>submit</button>
     </form>
+    <!-- display the reslt of the gpa calculator -->
+    <% if (locals.name && locals.id && locals.gpa) { %>
+        <h3>Result:</h3>
+        <p>Name: <%= name %></p>
+        <p>ID: <%= id %></p>
+        <p>GPA: <%= gpa %></p>
+    <% } %>
 
 </body>
 </html>
